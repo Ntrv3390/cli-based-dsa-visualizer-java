@@ -2,6 +2,7 @@ class Node {
     int data;
     Node next;
 
+    // constructor for node class
     public Node(int data)
     {
         this.data = data;
@@ -12,10 +13,12 @@ class Node {
 
 public class myLL {
 
+    // static variables declatation
     static Node head = null;
     static Node tail = null;
     static int size = 0;
 
+    // method for traversing a linked list
     public static void traverseLL()
     {
         Node temp = head;
@@ -27,6 +30,7 @@ public class myLL {
         System.out.println("null");
     }
 
+    // method for adding element at first position
     public static void addFirstLL(int data)
     {
         Node newNode = new Node(data);
@@ -43,6 +47,7 @@ public class myLL {
         traverseLL();
     }
 
+    // method for adding element at last position
     public static void addLastLL(int data)
     {
         Node newNode = new Node(data);
@@ -59,6 +64,7 @@ public class myLL {
         traverseLL();
     }
 
+    // method for adding an element at i'th index
     public static void addMiddleLL(int data, int i)
     {
         Node newNode = new Node(data);
@@ -82,6 +88,7 @@ public class myLL {
         traverseLL();
     }
 
+    // method for removing first element
     public static void removeFirstLL()
     {
         if(head == null)
@@ -96,7 +103,8 @@ public class myLL {
         size--;
         traverseLL();
     }
-
+    
+    // method for removing last element
     public static void removeLastLL()
     {
         if(head == null)
@@ -118,6 +126,7 @@ public class myLL {
         traverseLL();
     }
 
+    // method for removing i'th index element
     public static void removeMiddleLL(int i)
     {
         if(size < i)
@@ -144,6 +153,7 @@ public class myLL {
         traverseLL();
     }
 
+    // method for for performing iterative search
     public static void iterativeSearch(int k)
     {
         Node temp = head;
@@ -159,6 +169,7 @@ public class myLL {
         }
     }
 
+    // method for for performing recursive search
     public static void recursiveSearch(int k)
     {
         Node temp = head;
