@@ -5,7 +5,7 @@ public class main {
     {
         Scanner sc = new Scanner(System.in);
         int s;
-        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\n");
+        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\nPress 3 to visualize Stack.\n");
         s = sc.nextInt();
         int a = 1;
         while(a != 0){
@@ -127,19 +127,57 @@ public class main {
                                                         myLL.iterativeSearch(ki);
                                                         break; 
 
-                                                case 9: System.out.print("Enter a key to perform search iteratively: ");
+                                                case 9: System.out.print("Enter a key to perform search recursively: ");
                                                         int kr = sc.nextInt();
                                                         myLL.recursiveSearch(kr);
                                                         break;                
 
-                                                default: System.out.println("Default is add data at first position.");
-                                                         System.out.println("Enter a data to add first in the linked list");
-                                                         int data = sc.nextInt();
-                                                         myLL.addFirstLL(data);
+                                                default: System.out.println("Default is traversing the linkedlist.");
+                                                         myLL.traverseLL();
                                                          break;
                                         }
                                         System.out.print("If you wish to leave enter 0 or enter any number to continue: ");
                                         xLL = sc.nextInt();
+                                }
+                                break;
+                        
+                        case 3: System.out.println("Welcome to Stacks Visualization");
+                                int xS = 1;
+                                while(xS != 0)
+                                {
+                                        System.out.println("What would you like to do with your stack?\nPress 1 to traverse it.\nPress 2 to add an element in the stack.\nPress 3 to remove element from stack.\nPress 4 to get the top most data from the stack.\nPress 5 to search an element iteratively.\nPress 6 to search an element recursively.\n");
+                                        int yS = sc.nextInt();
+                                        switch(yS)
+                                        {
+                                                case 1: myStack.traverseStack();
+                                                        break;
+
+                                                case 2: System.out.println("Enter a data to add in your stack.");
+                                                        int data1 = sc.nextInt();
+                                                        myStack.push(data1);
+                                                        break;
+
+                                                case 3: myStack.pop();
+                                                        System.out.println("Data removed successfully");
+                                                        break;
+
+                                                case 4: myStack.peek();
+                                                        break;
+
+                                                case 5: System.out.print("Enter a key to perform search iteratively: ");
+                                                        int ki = sc.nextInt();
+                                                        myStack.iterativeSearch(ki);
+                                                        break; 
+
+                                                case 6: System.out.print("Enter a key to perform search recursively: ");
+                                                        int kr = sc.nextInt();
+                                                        myStack.recursiveSearch(kr);
+                                                        break;                
+
+                                                default: System.out.println("Default is traversing the stack.");
+                                                         myStack.traverseStack();
+                                                         break;
+                                        }
                                 }
                                 break;
 

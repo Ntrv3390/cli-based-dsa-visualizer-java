@@ -46,6 +46,27 @@ Searching LinkedList:
    1: Using Iterative Search
    2: Using Recursive Search
 
+# Visualizing Stacks
+
+A file name myStack.java contains the algorithms for adding, traversing & searching
+in a Stack.
+
+Adding Node in Stack:
+
+-- Node is always added at the top of the stack
+
+Removing Node from Stack:
+
+-- Node is always removed from the top of the stack
+
+-- Stack follows LIFO (Last In First Out) Structure.
+
+Searching Stack:
+
+-- Searching is done in two ways
+   1: Using Iterative Search
+   2: Using Recursive Search
+
 
 # More coming soon!
 
