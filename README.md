@@ -11,13 +11,13 @@ sorting, & searching.
 
 Searching Array:
 
--- Searching is done in two ways
+-- Searching is done in two ways:
    1: Using Linear Search
    2: Using Binary Search
 
 Sorting Array:
 
--- Sorting is done in two ways
+-- Sorting is done in two ways:
    1: Using Merge Sort
    2: Using Quick Sort
 
@@ -42,7 +42,7 @@ Removing Node from LinkedList:
 
 Searching LinkedList:
 
--- Searching is done in two ways
+-- Searching is done in two ways:
    1: Using Iterative Search
    2: Using Recursive Search
 
@@ -53,17 +53,38 @@ in a Stack.
 
 Adding Node in Stack:
 
--- Node is always added at the top of the stack
+-- Node is always added at the top of the stack.
 
 Removing Node from Stack:
 
--- Node is always removed from the top of the stack
+-- Node is always removed from the top of the stack.
 
 -- Stack follows LIFO (Last In First Out) Structure.
 
 Searching Stack:
 
--- Searching is done in two ways
+-- Searching is done in two ways:
+   1: Using Iterative Search
+   2: Using Recursive Search
+
+# Visualizing Queues
+
+A file name myQueue.java contains the algorithms for adding, traversing & searching
+in a Queue.
+
+Adding Node in Queue:
+
+-- Node is always added at the front of the queue.
+
+Removing Node from Queue:
+
+-- Node is always removed from the rear of the queue.
+
+-- Queue follows FIFO (First In First Out) Structure.
+
+Searching Queue:
+
+-- Searching is done in two ways:
    1: Using Iterative Search
    2: Using Recursive Search
 

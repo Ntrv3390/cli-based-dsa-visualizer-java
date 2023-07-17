@@ -5,7 +5,7 @@ public class main {
     {
         Scanner sc = new Scanner(System.in);
         int s;
-        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\nPress 3 to visualize Stack.\n");
+        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\nPress 3 to visualize Stack.\nPress 4 to visualize Queue.\n");
         s = sc.nextInt();
         int a = 1;
         while(a != 0){
@@ -180,9 +180,46 @@ public class main {
                                         }
                                 }
                                 break;
+                        
+                        case 4: System.out.println("Welcome to Queues Visualization");
+                                int xQ = 1;
+                                while(xQ != 0)
+                                {
+                                        System.out.println("What would you like to do with your queue?\nPress 1 to traverse it.\nPress 2 to add an element in the queue.\nPress 3 to remove element from queue.\nPress 4 to search an element iteratively.\nPress 5 to search an element recursively.\n");
+                                        int yQ = sc.nextInt();
+                                        switch(yQ)
+                                        {
+                                                case 1: myQueue.traverseQueue();
+                                                        break;
+
+                                                case 2: System.out.println("Enter a data to add in your queue.");
+                                                        int data1 = sc.nextInt();
+                                                        myQueue.enqueue(data1);
+                                                        break;
+
+                                                case 3: myQueue.dequeue();
+                                                        System.out.println("Data removed successfully");
+                                                        break;
+
+                                                case 4: System.out.print("Enter a key to perform search iteratively: ");
+                                                        int ki = sc.nextInt();
+                                                        myQueue.iterativeSearch(ki);
+                                                        break; 
+
+                                                case 5: System.out.print("Enter a key to perform search recursively: ");
+                                                        int kr = sc.nextInt();
+                                                        myQueue.recursiveSearch(kr);
+                                                        break;                
+
+                                                default: System.out.println("Default is traversing the queue.");
+                                                         myQueue.traverseQueue();
+                                                         break;
+                                        }
+                                }
+                                break;
 
                         default: System.out.println("Please enter a correct number corresponding to the paricular data structure");
-                                break;         
+                                 break;         
                 }
                 System.out.println("To exit enter 0 else enter any number to continue.");
         }        

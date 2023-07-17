@@ -11,14 +11,15 @@ class Node {
 
 }
 
-public class myStack {
+public class myQueue {
 
     // static variables declatation
     static Node head = null;
+    static Node tail = null;
     static int size = 0;
 
-    // method for traversing a stack
-    public static void traverseStack()
+    // method for traversing a queue
+    public static void traverseQueue()
     {
         Node temp = head;
         while(temp != null)
@@ -29,61 +30,55 @@ public class myStack {
         System.out.println("null");
     }
 
-    // method for adding element at top position
-    public static void push(int data)
+    // method for adding element at last position
+    public static void enqueue(int data)
     {
         Node newNode = new Node(data);
         if(head == null)
         {
-            head = newNode;
-            traverseStack();
+            head = tail = newNode;
+            traverseQueue();
             return;
         }
         newNode.next = head;
-        head = newNode;
+        tail = newNode;
         size++;
-        System.out.println("Your Stack is now: ");
-        traverseStack();
+        System.out.println("Your Queue is now: ");
+        traverseQueue();
     }
 
-    // method for removing top element
-    public static void pop()
+    // method for removing first element
+    public static void dequeue()
     {
         if(head == null)
         {
-            System.out.println("Stack is null ");
-            traverseStack();
+            System.out.println("Queue is null ");
+            traverseQueue();
             return;
         }
         if(size == 1)
         {
             System.out.println("Removed data is: " + head.data);
-            head = null;
-            traverseStack();
+            head = tail = null;
+            traverseQueue();
             return;
         }
         System.out.println("Removed data is: " + head.data);
         head = head.next;
         size--;
-        traverseStack();
-    }
-
-    // method for printing element at top position
-    public static void peek()
-    {
-        System.out.println("The data on the top of your Stack is: " + head.data);
+        traverseQueue();
     }
 
     // method for for performing iterative search
     public static void iterativeSearch(int k)
     {
-        Node temp = head;
+        Node temp = tail;
         int i = 0;
         while(temp != null)
         {
             if(temp.data == k)
             {
-                System.out.println("The element " + k + " was found in " + i + " index of your Stack");
+                System.out.println("The element " + k + " was found in " + i + " index of your Queue");
             }
             i++;
             temp = temp.next;
@@ -93,16 +88,16 @@ public class myStack {
     // method for for performing recursive search
     public static void recursiveSearch(int k)
     {
-        Node temp = head;
+        Node temp = tail;
         int x = recursiveSearchHelper(temp, k);
 
         if(x == -1)
         {
-            System.out.println("The element " + k + " was not found in your Stack.");
+            System.out.println("The element " + k + " was not found in your Queue.");
             return;
         }
 
-        System.out.println("The element " + k + " was found in " + x + " index of your Stack");
+        System.out.println("The element " + k + " was found in " + x + " index of your Queue");
     }
 
     public static int recursiveSearchHelper(Node temp, int k)
@@ -129,6 +124,6 @@ public class myStack {
 
 
     public static void main(String[] args) {
-        System.out.println("You're in Stacks");
+        System.out.println("You're in Queues");
     }
 }
