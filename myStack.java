@@ -129,6 +129,6 @@ public class myStack {
 
 
     public static void main(String[] args) {
-        System.out.println("You're in Stacks");
+        System.out.println("You're in Stacks.");
     }
 }

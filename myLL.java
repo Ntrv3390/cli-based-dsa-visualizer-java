@@ -208,6 +208,6 @@ public class myLL {
 
 
     public static void main(String[] args) {
-        System.out.println("You're in LinkedLists");
+        System.out.println("You're in LinkedLists.");
     }
 }

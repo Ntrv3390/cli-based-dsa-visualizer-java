@@ -162,7 +162,7 @@ public class myArrays {
     // main method for class myArrays
     public static void main(String[] args)
     {
-        System.out.println("You're in Arrays");
+        System.out.println("You're in Arrays.");
     }
 
 }
