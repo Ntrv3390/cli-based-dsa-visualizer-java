@@ -139,6 +139,7 @@ public class main {
                                         System.out.print("If you wish to leave enter 0 or enter any number to continue: ");
                                         xLL = sc.nextInt();
                                 }
+                                System.out.println("Thank you for visualizing LinkedLists");
                                 break;
                         
                         case 3: System.out.println("Welcome to Stacks Visualization");
@@ -178,7 +179,10 @@ public class main {
                                                          myStack.traverseStack();
                                                          break;
                                         }
+                                        System.out.print("If you wish to leave enter 0 or enter any number to continue: ");
+                                        xS = sc.nextInt();
                                 }
+                                System.out.println("Thank you for visualizing Stacks");
                                 break;
                         
                         case 4: System.out.println("Welcome to Queues Visualization");
@@ -215,7 +219,52 @@ public class main {
                                                          myQueue.traverseQueue();
                                                          break;
                                         }
+                                        System.out.print("If you wish to leave enter 0 or enter any number to continue: ");
+                                        xQ = sc.nextInt();
                                 }
+                                System.out.println("Thank you for visualizing Queues");
+                                break;
+
+                        case 5: System.out.println("Welcome to Tress Visualization");
+                                int xT = 1;
+                                Node node = myTrees.createTrees();
+                                System.out.println("Hurray!! Your tress has been created.");
+                                while(xT != 0)
+                                {
+                                        System.out.println("What would you like to do with your tree?\nPress 1 to traverse it using preorder.\nPress 2 to traverse it using inorder.\nPress 3 to traverse it using postorder.\nPress 4 to traverse it using level order.\nPress 5 to count nodes of your tree.\nPress 6 to calculate the sum of the data of all nodes of your tree.\n");
+                                        int yQ = sc.nextInt();
+                                        switch(yQ)
+                                        {
+                                                case 1: System.out.println("Preorder traversal of your tree is: ");
+                                                        myTrees.preorder(node);
+                                                        break;
+
+                                                case 2: System.out.println("Inorder traversal of your tree is: ");
+                                                        myTrees.inorder(node);
+                                                        break;
+
+                                                case 3: System.out.println("Postorder traversal of your tree is: ");
+                                                        myTrees.postorder(node);
+                                                        break;
+
+                                                case 4: System.out.println("Levelorder traversal of your tree is: ");
+                                                        myTrees.levelorder(node);
+                                                        break; 
+
+                                                case 5: System.out.println("No of nodes present in your tree is: " + myTrees.countNodes(node));
+                                                        break;
+                                                
+                                                case 6: System.out.println("Sum of the data of all nodes of your tress is: " + myTrees.countData(node));
+                                                        break;
+
+                                                default: System.out.println("Default is traversing the tree using inorder.");
+                                                         myTrees.preorder(node);
+                                                                break;
+                                        }
+                                        System.out.print("If you wish to leave enter 0 or enter any number to continue: ");
+                                        xT = sc.nextInt();
+                                }
+                                System.out.println("Thank you for visualizing trees");
                                 break;
 
                         default: System.out.println("Please enter a correct number corresponding to the paricular data structure");

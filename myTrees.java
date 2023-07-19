@@ -95,6 +95,31 @@ public class myTrees {
         }
     }
 
+
+    // count nodes of a tree
+    public static int countNodes(Node root){
+        if(root == null)
+        {
+            return 0;
+        }
+        int l = countNodes(root.left);
+        int r = countNodes(root.right);
+
+        return l+r+1;
+    }
+
+    // total sum of data of all nodes
+    public static int countData(Node root){
+        if(root == null)
+        {
+            return 0;
+        }
+        int l = countData(root.left);
+        int r = countData(root.right);
+
+        return l+r+root.data;
+    }
+
     public static void main(String[] args) {
         System.out.println("You're in trees.");
         Node node = createTrees();

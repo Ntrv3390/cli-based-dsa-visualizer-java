@@ -88,6 +88,23 @@ Searching Queue:
    1: Using Iterative Search
    2: Using Recursive Search
 
+# Visualizing Trees
+
+A file name myTrees.java contains the algorithms for adding, traversing and counting the
+nodes and data of the nodes in a tree. 
+
+Adding Node in Trees:
+
+-- Node is first added to the root node and then the left and right child.
+
+Traversing The Tree
+
+-- Traversing is done in four ways:
+   1: Using Preorder (recursive)
+   2: Using Inorder (recursive)
+   3: Using Postorder (recursive)
+   4: Using Levelorder (iterative)
+   
 
 # More coming soon!
 
