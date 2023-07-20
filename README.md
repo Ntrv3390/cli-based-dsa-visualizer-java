@@ -104,7 +104,28 @@ Traversing The Tree
    2: Using Inorder (recursive)
    3: Using Postorder (recursive)
    4: Using Levelorder (iterative)
-   
+
+# Visualizing Heaps
+
+A file name myHeaps.java contains the algorithms for adding, traversing, removing and sorting the
+heap. 
+
+Heaps are also referred as priority queues. As the queue follows the FIFO Structure, in heaps
+the data with high priority gets removed first.
+
+Adding Data in Heaps:
+
+-- Data is always added in heap (considering minHeap) such that its left child & right child
+are always greater than its parent.
+
+Removing Data from Heaps:
+
+-- Data is always removed from heap (considering minHeap) which is the smallest element present.
+
+Sorting The Heap
+
+-- Sorting is done in by converting the heap into a maxHeap and then sorting the data.
+
 
 # More coming soon!
 

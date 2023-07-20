@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main {
@@ -5,7 +6,7 @@ public class main {
     {
         Scanner sc = new Scanner(System.in);
         int s;
-        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\nPress 3 to visualize Stack.\nPress 4 to visualize Queue.\n");
+        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\nPress 3 to visualize Stack.\nPress 4 to visualize Queue.\nPress 5 to visualize Trees.\nPress 6 to visualize Heaps (Priority Queues).\n");
         s = sc.nextInt();
         int a = 1;
         while(a != 0){
@@ -232,8 +233,8 @@ public class main {
                                 while(xT != 0)
                                 {
                                         System.out.println("What would you like to do with your tree?\nPress 1 to traverse it using preorder.\nPress 2 to traverse it using inorder.\nPress 3 to traverse it using postorder.\nPress 4 to traverse it using level order.\nPress 5 to count nodes of your tree.\nPress 6 to calculate the sum of the data of all nodes of your tree.\n");
-                                        int yQ = sc.nextInt();
-                                        switch(yQ)
+                                        int yT = sc.nextInt();
+                                        switch(yT)
                                         {
                                                 case 1: System.out.println("Preorder traversal of your tree is: ");
                                                         myTrees.preorder(node);
@@ -265,6 +266,63 @@ public class main {
                                         xT = sc.nextInt();
                                 }
                                 System.out.println("Thank you for visualizing trees");
+                                break;
+                        
+                        case 6: System.out.println("Welcome to Heaps Visualization");
+                                int xH = 1;
+                                ArrayList<Integer> arr = new ArrayList<>();
+                                while(xH != 0)
+                                {
+                                        System.out.println("What would you like to do with your heap?\nEnter 1 to add new data in your heap.\nEnter 2 to print the peek element of your heap.\nEnter 3 to traverse your heap.\nEnter 4 to remove the priority element for your heap.\nEnter 5 to sort your heap using heap sort.\n");
+                                        int yH = sc.nextInt();
+                                        switch(yH)
+                                        {
+                                                case 1: System.out.print("Enter number of elements to add in your heap: ");
+                                                        int heapData = sc.nextInt();
+                                                        System.out.println("Enter " + heapData + " elements to add");
+                                                        
+                                                        int i = 0;
+                                                        while(i < heapData)
+                                                        {
+                                                              System.out.print("Enter " + (i+1) + "th data in the heap: ");  
+                                                              int data = sc.nextInt();  
+                                                              myHeaps.addMinHeap(arr, data);
+                                                              i++;
+                                                        }
+                                                        System.out.println("All elements added to your heap.");
+                                                        break;
+
+                                                case 2: myHeaps.peekHeap(arr);
+                                                        break;
+
+                                                case 3: myHeaps.traverseHeap(arr);
+                                                        break;
+
+                                                case 4: myHeaps.removeHeap(arr);
+                                                        break;
+
+                                                case 5: myHeaps.heapSort(arr);
+                                                        break;
+
+                                                default: System.out.println("Default is adding a data in the heap.");
+                                                         System.out.print("Enter number of elements to add in your heap: ");
+                                                         int heapData1 = sc.nextInt();
+                                                         System.out.println("Enter " + heapData1 + " elements to add");
+                                                         int j = 0;
+                                                         while(j < heapData1)
+                                                         {
+                                                              System.out.println("Enter " + (j+1) + "th data in the heap");  
+                                                              int data = sc.nextInt();  
+                                                              myHeaps.addMinHeap(arr, data);
+                                                              j++;
+                                                         }
+                                                         System.out.println("All elements added to your heap.");
+                                                         break;
+                                        }
+                                        System.out.print("If you wish to leave enter 0 or enter any number to continue: ");
+                                        xH = sc.nextInt();
+                                }
+                                System.out.println("Thank you for visualizing hea[s]");
                                 break;
 
                         default: System.out.println("Please enter a correct number corresponding to the paricular data structure");
