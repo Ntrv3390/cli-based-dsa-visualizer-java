@@ -155,7 +155,7 @@ Rehash Function
    When the labda value becomes greater than k, we make the size of array double in order to simplify the 
    complexity of insertion, deletion, etc. This is not done on regular basis but is done once a year or two.
 
-# Visualizing Queues
+# Visualizing Tries
 
 A file name myTries.java contains the algorithms for adding, & searching
 in a trie.
