@@ -1,7 +1,7 @@
-# A CLI Based Data Structures & Algorithm Visualizer
+# A CLI Based Data Structures & Algorithms Visualizer
 
 Hi, welcome to dsa visualizer. In this project you can find all the
-major data structures such as arrays, linkedlists, trees, graphs,
+major data structures such as arrays, linkedlists, trees, heaps, graphs,
 tries, and hashmaps.
 
 # Visualizing Arrays
@@ -125,6 +125,35 @@ Removing Data from Heaps:
 Sorting The Heap
 
 -- Sorting is done in by converting the heap into a maxHeap and then sorting the data.
+
+# Visualizing HashMaps
+
+A file name myHashMaps.java contains the algorithms for adding, traversing, and removing  
+the data from hashmaps. 
+
+HashMaps are stored in an array of LinkedList and all the operations of adding, removing
+or searching is done in O(1) time complexity.
+
+Types Of HashMaps:
+
+-- HashMaps are of three types:
+   1: Regular HashMap - (Displays the data in random manner irrespective of in a which they were added.)
+   2: Linked HashMap - (Displays the data in manner in a which they were added.)
+   3: TreeMap - (Displays the data in sorted manner.) (Here time complexity becomes O(logn) due to sorting.)
+
+Adding Data in HashMaps:
+
+-- Data is added as a node in LinkedList and that linkedlist is stored in an array (i.e Array Of LinkedLists).
+
+Hashing Function
+
+-- Hashing Function is used to convert the raw text into cipher text (i.e. encrypt the data).
+
+Rehash Function
+
+-- Rehashing is done when the lambda (= no of nodes/size of array) is greater than a value k where k is constant.
+   When the labda value becomes greater than k, we make the size of array double in order to simplify the 
+   complexity of insertion, deletion, etc. This is not done on regular basis but is done once a year or two.
 
 
 # More coming soon!

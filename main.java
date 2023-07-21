@@ -6,7 +6,7 @@ public class main {
     {
         Scanner sc = new Scanner(System.in);
         int s;
-        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\nPress 3 to visualize Stack.\nPress 4 to visualize Queue.\nPress 5 to visualize Trees.\nPress 6 to visualize Heaps (Priority Queues).\n");
+        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\nPress 3 to visualize Stack.\nPress 4 to visualize Queue.\nPress 5 to visualize Trees.\nPress 6 to visualize Heaps (Priority Queues).\nPress 7 to visualize HashMaps.\n");
         s = sc.nextInt();
         int a = 1;
         while(a != 0){
@@ -322,8 +322,76 @@ public class main {
                                         System.out.print("If you wish to leave enter 0 or enter any number to continue: ");
                                         xH = sc.nextInt();
                                 }
-                                System.out.println("Thank you for visualizing hea[s]");
+                                System.out.println("Thank you for visualizing heaps");
                                 break;
+
+                        case 7: System.out.println("Welcome to HashMaps Visualization");
+                                int xHa = 1;
+                                myHashMaps<Integer, Integer> hm = new myHashMaps<>();
+                                while(xHa != 0)
+                                {
+                                        System.out.println("What would you like to do with your hashmap?\nEnter 1 to add elements in your hashmap.\nEnter 2 to search if key exists or not.\nEnter 3 to remove a key from hashmap.\nEnter 4 to get a key's value from hashmap.\nEnter 5 to traverse the hashmap.\n");
+                                        int yHa = sc.nextInt();
+                                        switch(yHa)
+                                        {
+                                                case 1: System.out.print("Enter number of elements to add in your hashmap: ");
+                                                        int keyData = sc.nextInt();
+                                                        System.out.println("Enter " + keyData + " elements to add");
+                                                        
+                                                        int i = 0;
+                                                        while(i < keyData)
+                                                        {
+                                                              System.out.print("Enter " + (i+1) + "th key in the hashmap: ");  
+                                                              int key = sc.nextInt(); 
+                                                              System.out.print("Enter " + (i+1) + "th data in the hashmap: ");  
+                                                              int value = sc.nextInt();  
+                                                              hm.put(key, value);
+                                                              i++;
+                                                        }
+                                                        System.out.println("All elements added to your hashmap.");
+                                                        break;
+
+                                                case 2: System.out.print("Enter a key value to search: ");
+                                                        int key1 = sc.nextInt();
+                                                        hm.containsKey(key1);
+                                                        break;
+
+                                                case 3: System.out.print("Enter a key value to remove: ");
+                                                        int key2 = sc.nextInt();
+                                                        hm.remove(key2);
+                                                        break;
+
+                                                case 4: System.out.print("Enter a key value to get it's value: ");
+                                                        int key3 = sc.nextInt();
+                                                        hm.get(key3);
+                                                        break;
+
+                                                case 5: hm.traverseHashMap();
+                                                        break;
+
+                                                default: System.out.println("Default is adding a data in the hashmap.");
+                                                         System.out.print("Enter number of elements to add in your hashmap: ");
+                                                         int keyData1 = sc.nextInt();
+                                                         System.out.println("Enter " + keyData1 + " elements to add");
+                                                        
+                                                         int j = 0;
+                                                         while(j < keyData1)
+                                                         {
+                                                              System.out.print("Enter " + (j+1) + "th key in the hashmap: ");  
+                                                              int key = sc.nextInt(); 
+                                                              System.out.print("Enter " + (j+1) + "th data in the hashmap: ");  
+                                                              int value = sc.nextInt();  
+                                                              hm.put(key, value);
+                                                              j++;
+                                                         }
+                                                         System.out.println("All elements added to your hashmap.");
+                                                         break;
+                                        }
+                                        System.out.print("If you wish to leave enter 0 or enter any number to continue: ");
+                                        xHa = sc.nextInt();
+                                }
+                                System.out.println("Thank you for visualizing hashmaps");
+                                break;        
 
                         default: System.out.println("Please enter a correct number corresponding to the paricular data structure");
                                  break;         
