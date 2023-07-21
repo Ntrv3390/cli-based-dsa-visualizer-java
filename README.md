@@ -155,6 +155,20 @@ Rehash Function
    When the labda value becomes greater than k, we make the size of array double in order to simplify the 
    complexity of insertion, deletion, etc. This is not done on regular basis but is done once a year or two.
 
+# Visualizing Queues
+
+A file name myTries.java contains the algorithms for adding, & searching
+in a trie.
+
+Adding Node in Trie:
+
+-- Trie is a data strucutre in which the prefix remains same. If we add a string in trie and if the prefix
+   of that word is already present then we just add the suffix of the word and not the whole.
+
+Searching Trie:
+
+-- Searching is done in a similar fashion as adding a node.
+
 
 # More coming soon!
 

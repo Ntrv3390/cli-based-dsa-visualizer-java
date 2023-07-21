@@ -1,6 +1,9 @@
 import java.util.*;
 
+// HashMap class takes generic parameters: K - key & V - Value
 public class myHashMaps<K, V> {
+
+        // Node class
         private class Node {
             K key;
             V value;
@@ -12,10 +15,12 @@ public class myHashMaps<K, V> {
             }
         }
 
+        // variables and array of linkedlist initialization & instantiation
         private int n = 0;
         private int N;
         private LinkedList<Node>[] buckets;
 
+        // hashmap class constructor
         @SuppressWarnings("unchecked")
         public myHashMaps()
         {
@@ -28,12 +33,14 @@ public class myHashMaps<K, V> {
             }
         }
 
+        // hash function to encrypt the data
         private int hashFunction(K key)
         {
             int bi = key.hashCode();
             return Math.abs(bi) % N;
         }
 
+        // function to search for a key in linkedlist
         private int searchLL(K key, int bi)
         {
             LinkedList<Node> ll = buckets[bi];
@@ -50,6 +57,7 @@ public class myHashMaps<K, V> {
             return -1;
         }
 
+        // function for rehashing the array
         @SuppressWarnings("unchecked")
         private void rehash()
         {
@@ -73,6 +81,7 @@ public class myHashMaps<K, V> {
             }
         }
 
+        // function for adding element in hashmap
         public void put(K key, V value)
         {
             int bIdx = hashFunction(key);
@@ -97,6 +106,7 @@ public class myHashMaps<K, V> {
             }
         }
 
+        // function to search for a key in hashmap
         public void containsKey(K key)
         {
             int bIdx = hashFunction(key);
@@ -112,6 +122,7 @@ public class myHashMaps<K, V> {
             }
         }
 
+        // function to remove a key from hashmap
         public void remove(K key)
         {
             int bIdx = hashFunction(key);
@@ -129,6 +140,7 @@ public class myHashMaps<K, V> {
             System.out.println("Node with key value= " + node.key + "has been removed successfully from your hashmap.");
         }
 
+        // function to get a value of key in hashmap
         public void get(K key)
         {
             int bIdx = hashFunction(key);
@@ -144,6 +156,7 @@ public class myHashMaps<K, V> {
             System.out.println("Node with key value= " + ll.get(dIdx).value + "has been removed successfully from your hashmap.");
         }
 
+        // function for traversing the hashmap
         public ArrayList<K> keySet()
         {
             ArrayList<K> keys = new ArrayList<>();
@@ -168,13 +181,19 @@ public class myHashMaps<K, V> {
             }
         }
 
-        public boolean isEmpty()
+        // function to check whether hashmap is empty or not
+        public void isEmpty()
         {
-            return n==0;
+            if(n == 0)
+            {
+                System.out.println("Your hashmap is empty.");
+                return;
+            }
+            System.out.println("Your hashmap is not empty.");
         }
         public static void main(String[] args) {
         System.out.println("You are in HashMaps");
-}
     }
+}
     
     

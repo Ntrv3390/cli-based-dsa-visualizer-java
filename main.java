@@ -6,7 +6,7 @@ public class main {
     {
         Scanner sc = new Scanner(System.in);
         int s;
-        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\nPress 3 to visualize Stack.\nPress 4 to visualize Queue.\nPress 5 to visualize Trees.\nPress 6 to visualize Heaps (Priority Queues).\nPress 7 to visualize HashMaps.\n");
+        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\nPress 3 to visualize Stack.\nPress 4 to visualize Queue.\nPress 5 to visualize Trees.\nPress 6 to visualize Heaps (Priority Queues).\nPress 7 to visualize HashMaps.\nPress 8 to visualize Tries.\n");
         s = sc.nextInt();
         int a = 1;
         while(a != 0){
@@ -391,7 +391,59 @@ public class main {
                                         xHa = sc.nextInt();
                                 }
                                 System.out.println("Thank you for visualizing hashmaps");
-                                break;        
+                                break;
+                                
+                        case 8: System.out.println("Welcome to Tries Visualization");
+                                int xTr = 1;
+                                while(xTr != 0)
+                                {
+                                        System.out.println("What would you like to do with your tries?\nEnter 1 to add strings in your trie.\nEnter 2 to search if a string exists or not in your trie.\n");
+                                        int yTr = sc.nextInt();
+                                        switch(yTr)
+                                        {
+                                                case 1: System.out.print("Enter number of strings to add in your trie: ");
+                                                        int nS = sc.nextInt();
+                                                        System.out.println("Enter " + nS + " strings to add");
+                                                        
+                                                        int i = 0;
+                                                        sc.nextLine();
+                                                        while(i < nS)
+                                                        {
+                                                              System.out.print("Enter " + (i+1) + "th string in the trie: ");  
+                                                              String key = sc.nextLine(); 
+                                                              myTries.insert(key);
+                                                              i++;
+                                                        }
+                                                        System.out.println("All strings added to your trie.");
+                                                        break;
+
+                                                case 2: System.out.print("Enter a key value to search a word: ");
+                                                        sc.nextLine();
+                                                        String key1 = sc.nextLine();
+                                                        myTries.search(key1);
+                                                        break;
+
+
+                                                default: System.out.print("Enter number of strings to add in your trie: ");
+                                                        int nS1 = sc.nextInt();
+                                                        System.out.println("Enter " + nS1 + " strings to add");
+                                                        
+                                                        int j = 0;
+                                                        while(j < nS1)
+                                                        {
+                                                              System.out.print("Enter " + (j+1) + "th string in the trie: ");  
+                                                              String key = sc.nextLine(); 
+                                                              myTries.insert(key);
+                                                              j++;
+                                                        }
+                                                        System.out.println("All strings added to your trie.");
+                                                        break;
+                                        }
+                                        System.out.print("If you wish to leave enter 0 or enter any number to continue: ");
+                                        xTr = sc.nextInt();
+                                }
+                                System.out.println("Thank you for visualizing tries");
+                                break;
 
                         default: System.out.println("Please enter a correct number corresponding to the paricular data structure");
                                  break;         
