@@ -6,7 +6,7 @@ public class main {
     {
         Scanner sc = new Scanner(System.in);
         int s;
-        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\nPress 3 to visualize Stack.\nPress 4 to visualize Queue.\nPress 5 to visualize Trees.\nPress 6 to visualize Heaps (Priority Queues).\nPress 7 to visualize HashMaps.\nPress 8 to visualize Tries.\n");
+        System.out.println("Enter your choice.\nPress 1 to visualize arrays.\nPress 2 to visualize LinkedList.\nPress 3 to visualize Stack.\nPress 4 to visualize Queue.\nPress 5 to visualize Trees.\nPress 6 to visualize Heaps (Priority Queues).\nPress 7 to visualize HashMaps.\nPress 8 to visualize Tries.\nPress 9 to visualize Graphs.\n");
         s = sc.nextInt();
         int a = 1;
         while(a != 0){
@@ -442,7 +442,36 @@ public class main {
                                         System.out.print("If you wish to leave enter 0 or enter any number to continue: ");
                                         xTr = sc.nextInt();
                                 }
-                                System.out.println("Thank you for visualizing tries");
+                                System.out.println("Thank you for visualizing Tries.");
+                                break;
+
+                        case 9: System.out.println("Welcome to Graphs Visualization");
+                                int xG = 1;
+                                while(xG != 0)
+                                {
+                                        System.out.println("What would you like to do with your graph?\nEnter 1 to insert edges in the graph.\nEnter 2 to traverse the graph using breadth first search(bfs).\nEnter 3 to traverse the graph using depth first search(dfs).\n");
+                                        int yG = sc.nextInt();
+                                        switch(yG)
+                                        {
+                                                case 1: System.out.println("You can enter maximum of 5 edges.");
+                                                        myGraphs.insert();
+                                                        break;
+
+                                                case 2: myGraphs.bfs();
+                                                        break;
+
+                                                case 3: myGraphs.dfs(0, new boolean[10]);
+                                                        System.out.println();
+                                                        break;
+
+                                                default: System.out.println("Default is to insert data in the graph.");
+                                                         myGraphs.insert();
+                                                         break;
+                                        }
+                                        System.out.print("If you wish to leave enter 0 or enter any number to continue: ");
+                                        xG = sc.nextInt();
+                                }
+                                System.out.println("Thank you for visualizing Graphs.");
                                 break;
 
                         default: System.out.println("Please enter a correct number corresponding to the paricular data structure");

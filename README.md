@@ -169,8 +169,21 @@ Searching Trie:
 
 -- Searching is done in a similar fashion as adding a node.
 
+# Visualizing Graphs
 
-# More coming soon!
+A file name myGraphs.java contains the algorithms for adding, & travesing
+the graphs.
+
+Adding Data in Graph:
+
+-- In graph we visualize it as a pair of set of nodes and vertices. Any two node can be connected by an edge
+   to make a graph. Here in this project graphs are made using adjacency list i.e. Array of ArrayList.
+
+Traversing Graphs:
+
+-- Traversing is done in two ways:
+   1: Using Breadth First Search(BFS) - (iterative)
+   2: Using Depth First Search(DFS) - (recursive)
 
 
 # Thank you for visualizing!
